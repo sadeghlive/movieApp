@@ -1,4 +1,42 @@
-/* .image{
-    height: 200px;
-    width: 100px;
-} */
+.post{
+    position: relative;
+    cursor: pointer;
+
+}
+.image {
+    width: 100%;
+    margin: 20px;
+    border-radius: 30px;
+    max-width: 300px;
+    max-height: 400px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.15);
+    background-color: black;
+    transition: ease 0.1s;
+}
+
+.post:hover img{
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    filter: grayscale(100%) blur(2px);
+}
+
+.post h1 {
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    color: white;
+    background-color: black;
+    padding: 15px;
+
+}
+.post h2 {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    max-width: 280px;
+    color: white;
+    display: none;
+}
+
+.post:hover h2{
+    display: block;
+}

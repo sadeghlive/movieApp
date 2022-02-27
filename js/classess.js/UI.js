@@ -4,21 +4,17 @@ class UI {
         const main      = document.getElementById('main')
 
         if(list != undefined){
-                list.forEach((movie)=>{
+                list.map((movie)=>{
 
                     const {title,poster_path,vote_average,overview} = movie;
                     const div = document.createElement('div')
-                    div.classList.add('col-3')
+                    div.classList.add('col-4','post')
                     div.innerHTML = `
-                    <img class="image col-4" src="${imagePath + poster_path}" alt="${title}" />
-                    <div class="movie-info">
-                        <h3>${title}</h3>
-                        <span class="test">${vote_average}</span>
-                    </div>
-                    <div class="overview">
-                        <h3>Overview</h3>
-                        ${overview}
-                    </div>`
+                    <img class="image" src="${imagePath + poster_path}" alt="${title}" />
+                    <h1>${vote_average}</h1>
+                    <h2>${title}</h2>
+
+                   `
                     main.appendChild(div)
 
                 })
